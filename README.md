@@ -6,8 +6,7 @@ Frasão, A. A. C.
 
 programa para gerar um fotomosaico.
 
-Para ultilizar o programa, execute o comando make no terminal (dentro da pasta em que o código esta).
-execute um desses comandos:
+Para ultilizar o programa, execute o comando make no terminal (dentro da pasta em que o código esta) e execute um desses comandos:
 
 // entrada e saída em arquivos
 mosaico -i input.ppm  -o output.ppm
