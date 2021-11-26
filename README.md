@@ -25,5 +25,5 @@ mosaico -p /tmp/tiles -i input.ppm -o output.ppm
 mosaico -i input.ppm -p /tmp/tiles -o output.ppm
 mosaico -o output.ppm -i input.ppm -p /tmp/tiles
 
-As pastilhas a usar para a construção do mosaico são imagens em formato PPM fornecidas pelo professor e colocadas em um diretório separado (por default ./tiles/).
+As pastilhas a usar para a construção do mosaico são imagens em formato PPM em um diretório separado (por default ./tiles/).
 mas podem ser usadas outras pastilhas usando o comando a cima da forma correta.
