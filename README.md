@@ -1,29 +1,32 @@
-# fotomosaico
-Trabalho feito para a matéria de programação 2, no curso de Ciencia da Computação, da Universidade Federal do Paraná.
+# Photomosaic
+Work done for the programming 2 subject in the Computer Science course at the Federal University of Paraná.
 
-Autor:
-Frasão, A. A. C.
+Made by Anderson Frasão
 
-programa para gerar um fotomosaico.
+Objective
 
-Para ultilizar o programa, execute o comando make no terminal (dentro da pasta em que o código esta) e execute um desses comandos:
+To generate a photomosaic.
 
-// entrada e saída em arquivos
+Execution
 
-> ./mosaico -i input.ppm  -o output.ppm
+To use the program, run the make command in the terminal (inside the folder where the code is) and execute one of these commands:
+
+// input and output to files
+
+> ./mosaico -i input.ppm -o output.ppm
 > ./mosaico -o output.ppm -i input.ppm
 
-// entrada em arquivo, saída em stdout, vice-versa ou ambos
+// input to file, output to stdout, vice versa or both
 
-> ./mosaico -i input.ppm  > output.ppm
+> ./mosaico -i input.ppm > output.ppm
 > ./mosaico -o output.ppm < input.ppm
-> ./mosaico <  input.ppm  > output.ppm
+> ./mosaico < input.ppm > output.ppm
 
-// as opções podem estar em qualquer ordem
+// the options can be in any order
 
 > ./mosaico -p /tmp/tiles -i input.ppm -o output.ppm
 > ./mosaico -i input.ppm -p /tmp/tiles -o output.ppm
 > ./mosaico -o output.ppm -i input.ppm -p /tmp/tiles
 
-As pastilhas a usar para a construção do mosaico são imagens em formato PPM em um diretório separado (por default ./tiles/).
-mas podem ser usadas outras pastilhas usando o comando a cima da forma correta.
+The tiles to be used for building the mosaic are images in PPM format in a separate directory (by default ./tiles/).
+But you can use other tiles using the command above in the correct way.
