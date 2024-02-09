@@ -1,5 +1,5 @@
 
-const { exec } = require('child_process');
+const { exec } = require('node:child_process');
 
 // const divs = document.querySelector('#conteiner');
 
