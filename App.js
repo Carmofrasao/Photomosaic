@@ -1,7 +1,7 @@
 
 const { exec } = require('child_process');
 
-const divs = document.querySelector('#conteiner');
+// const divs = document.querySelector('#conteiner');
 
 
 // Caminho para o arquivo ELF que você deseja executar
