@@ -5,7 +5,7 @@ const { exec } = require('node:child_process');
 
 
 // Caminho para o arquivo ELF que você deseja executar
-const elfFilePath = './mosaico';
+const elfFilePath = 'mosaico';
 
 // Comando para executar o arquivo ELF
 const command = `./${elfFilePath}`;
