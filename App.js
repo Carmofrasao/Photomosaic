@@ -4,7 +4,7 @@ fetch('./src/saida.wasm')
     .then(module => {
         Module = module.instance.exports;
         // Redefinir a função gerarFotomosaico com Module definido
-        function gerarFotomosaico() {
+        function gerarFoto() {
             var caminhoImagemOriginal = document.getElementById("inputImagemOriginal").value;
             var diretorioSelecionado = document.getElementById("selectDiretorioImagens").value;
             console.log("chegou aqui");
@@ -24,3 +24,9 @@ fetch('./src/saida.wasm')
         gerarFotomosaico();
     })
     .catch(error => console.error(error));
+
+const gerarFotomosaico = document.querySelector('#gerarFotomosaico');
+
+gerarFotomosaico.addEventListener('click', () => {
+  gerarFoto()
+})
