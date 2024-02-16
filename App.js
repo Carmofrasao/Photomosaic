@@ -1,3 +1,4 @@
+let Module = {};
 
 function gerarFotomosaico() {
     var caminhoImagemOriginal = document.getElementById("inputImagemOriginal").value;
@@ -15,3 +16,14 @@ function gerarFotomosaico() {
         alert("Por favor, selecione a imagem original e o conjunto de imagens para gerar o fotomosaico.");
     }
 }
+
+// Carregue o módulo WebAssembly
+fetch('seu_modulo_wasm.wasm')
+    .then(response => response.arrayBuffer())
+    .then(buffer => WebAssembly.instantiate(buffer))
+    .then(module => {
+        Module = module.instance.exports;
+        // O módulo WebAssembly está carregado, você pode chamar sua função principal aqui
+        gerarFotomosaico();
+    })
+    .catch(error => console.error(error));
