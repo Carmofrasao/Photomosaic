@@ -7,7 +7,7 @@ function gerarFotomosaico() {
     if (caminhoImagemOriginal && caminhoConjuntoImagens) {
         // Chame a função do módulo WebAssembly para gerar o fotomosaico
         console.log("chegou aqui 1");
-        Module.ccall('main', 'number', ['string', 'string'], ['./'+caminhoImagemOriginal, caminhoConjuntoImagens]);
+        Module.ccall('main', 'number', ['string', 'string'], ['./'+caminhoImagemOriginal, diretorioSelecionado]);
         console.log("chegou aqui 2");
         // Uma vez que a função é chamada, você pode querer exibir o resultado na tela ou fazer outra coisa com ele
         // Por exemplo, você pode atualizar uma imagem na página com o resultado gerado
