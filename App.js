@@ -1,8 +1,8 @@
 
 function gerarFotomosaico() {
     var caminhoImagemOriginal = document.getElementById("inputImagemOriginal").value;
-    var caminhoConjuntoImagens = document.getElementById("inputConjuntoImagens").value;
-    
+    var diretorioSelecionado = document.getElementById("selectDiretorioImagens").value;
+
     // Verifique se os caminhos dos arquivos foram fornecidos
     if (caminhoImagemOriginal && caminhoConjuntoImagens) {
         // Chame a função do módulo WebAssembly para gerar o fotomosaico

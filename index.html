@@ -9,7 +9,14 @@
     </head>
     <body>
         <input type="file" id="inputImagemOriginal">
-        <input type="file" id="inputConjuntoImagens">
+        
+        <select id="selectDiretorioImagens">
+          <option value="diretorio1">Diretório 1</option>
+          <option value="diretorio2">Diretório 2</option>
+          <option value="diretorio3">Diretório 3</option>
+        <!-- Adicione mais opções conforme necessário -->
+        </select>
+
         <button onclick="gerarFotomosaico()">Gerar Fotomosaico</button>
 
         <script src="App.js"></script>
