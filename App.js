@@ -1,21 +1,16 @@
 
-const { exec } = require('node:child_process');
-
-// const divs = document.querySelector('#conteiner');
-
-
-// Caminho para o arquivo ELF que você deseja executar
-const elfFilePath = 'mosaico';
-
-// Comando para executar o arquivo ELF
-const command = `./${elfFilePath}`;
-
-// Executa o comando
-exec(command, (error, stdout, stderr) => {
-  if (error) {
-    console.error(`Erro ao executar o arquivo ELF: ${error}`);
-    return;
-  }
-  console.log(`Saída padrão: ${stdout}`);
-  console.error(`Saída de erro: ${stderr}`);
-});
+function gerarFotomosaico() {
+    var caminhoImagemOriginal = document.getElementById("inputImagemOriginal").value;
+    var caminhoConjuntoImagens = document.getElementById("inputConjuntoImagens").value;
+    
+    // Verifique se os caminhos dos arquivos foram fornecidos
+    if (caminhoImagemOriginal && caminhoConjuntoImagens) {
+        // Chame a função do módulo WebAssembly para gerar o fotomosaico
+        Module.ccall('generatePhotomosaic', 'number', ['string', 'string'], [caminhoImagemOriginal, caminhoConjuntoImagens]);
+        
+        // Uma vez que a função é chamada, você pode querer exibir o resultado na tela ou fazer outra coisa com ele
+        // Por exemplo, você pode atualizar uma imagem na página com o resultado gerado
+    } else {
+        alert("Por favor, selecione a imagem original e o conjunto de imagens para gerar o fotomosaico.");
+    }
+}
