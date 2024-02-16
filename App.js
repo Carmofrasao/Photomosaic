@@ -18,7 +18,7 @@ function gerarFotomosaico() {
 }
 
 // Carregue o módulo WebAssembly
-fetch('./src/saida.js')
+fetch('./src/saida.wasm')
     .then(response => response.arrayBuffer())
     .then(buffer => WebAssembly.instantiate(buffer))
     .then(module => {
