@@ -4667,7 +4667,7 @@ function stackCheckInit() {
   writeStackCookie();
 }
 
-function run(args = arguments_) {
+export default function run(args = arguments_) {
 
   if (runDependencies > 0) {
     return;
@@ -4768,7 +4768,7 @@ var shouldRunNow = true;
 
 if (Module['noInitialRun']) shouldRunNow = false;
 
-run();
+// run();
 
 
 // end include: postamble.js
