@@ -7,7 +7,9 @@ gerarFotomosaico.addEventListener('click', () => {
   const diretorioSelecionado = document.getElementById("selectDiretorioImagens").value;
   let entrada = "-p "+diretorioSelecionado+" -i "+caminhoImagemOriginal+" -o saida.ppm";
   console.log(entrada);
-  run(entrada);  
+  run(entrada); 
+  document.getElementById('imagemResultado').src = "./saida.ppm";
+  document.querySelector('a').href = "./saida.ppm";
   entrada = "";
 })
 
