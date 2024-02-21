@@ -8,10 +8,15 @@ gerarFotomosaico.addEventListener('click', () => {
   let entrada = "-p "+diretorioSelecionado+" -i "+caminhoImagemOriginal+" -o saida.ppm";
   console.log(entrada);
   run(entrada); 
-  // Suponha que a variável 'imagemResultanteURL' contenha a URL da imagem resultante
-  document.getElementById('imagemResultado').src = "./saida.ppm";
-  // Suponha que a variável 'imagemResultanteURL' contenha a URL da imagem resultante
-  document.querySelector('a').href = imagemResultanteURL;
+
+  const img = document.createElement("img");
+  img.src = URL.createObjectURL("./saida.ppm");
+  img.height = 60;
+  img.onload = () => {
+    URL.revokeObjectURL(img.src);
+  };
+  
+  document.querySelector('a').href = "./saida.ppm";
   entrada = "";
 })
 
